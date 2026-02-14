@@ -1,0 +1,29 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+  functions = "netlify/functions"
+
+[[redirects]]
+  from = "/api/stock/quote"
+  to = "/.netlify/functions/stock-quote"
+  status = 200
+
+[[redirects]]
+  from = "/api/stock/history"
+  to = "/.netlify/functions/stock-history"
+  status = 200
+
+[[redirects]]
+  from = "/api/crypto/quote"
+  to = "/.netlify/functions/crypto-quote"
+  status = 200
+
+[[redirects]]
+  from = "/api/crypto/history"
+  to = "/.netlify/functions/crypto-history"
+  status = 200
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
